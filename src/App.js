@@ -1,24 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import { Switch, Route } from "react-router-dom";
+import { Container, Col, Row } from "react-bootstrap";
+import Account from "./Account";
+import FreeComponent from "./FreeComponent";
+import AuthComponent from "./AuthComponent";
+import ProtectedRoutes from "./ProtectedRoutes";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> arara
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Container>
+      <Row>
+        <Col className="text-center">
+          <section id="navigation">
+          </section>
+        </Col>
+      </Row>
+
+      {/* create routes here */}
+      <Switch>
+        <Route exact path="/" component={Account} />
+        <Route exact path="/free" component={FreeComponent} />
+        <ProtectedRoutes path="/auth" component={AuthComponent} />
+      </Switch>
+    </Container>
   );
 }
 
