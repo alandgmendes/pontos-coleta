@@ -4,6 +4,7 @@ import Account from "./Account";
 import AuthComponent from "./AuthComponent";
 import ProtectedRoutes from "./ProtectedRoutes";
 
+
 function App() {
   return (
     <Container>
