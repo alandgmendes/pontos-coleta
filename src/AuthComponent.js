@@ -1,5 +1,4 @@
 import React, {  useState } from "react";
-import { Button } from "react-bootstrap";
 import Select from 'react-select';
 import Cookies from "universal-cookie";
 import MapGoogle from "./Design/Components/map/MapGoogle";
@@ -48,9 +47,9 @@ export default function AuthComponent() {
         { tipoConsulta === "AddPt" &&<Points />}
         {/* logout */}
         <br/><br/><br/><BackButton></BackButton><br/><br/><br/><br/>
-        <Button type="submit" variant="danger" onClick={() => logout()}>
+        <button type="submit" variant="danger" onClick={() => logout()}>
           Logout
-        </Button>
+        </button>
       </>}      
     </div>
   );
