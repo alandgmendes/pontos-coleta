@@ -2,7 +2,6 @@ import React, {  useState } from "react";
 import Select from 'react-select';
 import Cookies from "universal-cookie";
 import MapGoogle from "./Design/Components/map/MapGoogle";
-import BackButton from "./Design/Components/buttons/BackButton";
 import Points from "./Design/Components/points/Points";
 
 const cookies = new Cookies();
@@ -46,7 +45,7 @@ export default function AuthComponent() {
         { tipoConsulta === "Mapa" &&<MapGoogle />}
         { tipoConsulta === "AddPt" &&<Points />}
         {/* logout */}
-        <br/><br/><br/><BackButton></BackButton><br/><br/><br/><br/>
+        <br/><br/><br/><br/><br/><br/><br/>
         <button type="submit" variant="danger" onClick={() => logout()}>
           Logout
         </button>
