@@ -18,7 +18,6 @@ function App() {
       {/* create routes here */}
       <Switch>
         <Route exact path="/" component={Account} />
-        <Route exact path="/free" component={FreeComponent} />
         <ProtectedRoutes path="/auth" component={AuthComponent} />
       </Switch>
     </Container>
