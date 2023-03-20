@@ -4,6 +4,7 @@ import Account from "./Account";
 import FreeComponent from "./FreeComponent";
 import AuthComponent from "./AuthComponent";
 import ProtectedRoutes from "./ProtectedRoutes";
+import MapGoogle from "./Design/Components/map/MapGoogle";
 
 function App() {
   return (

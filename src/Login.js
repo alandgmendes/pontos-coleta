@@ -16,14 +16,12 @@ export default function Login() {
     // set configurations
     const configuration = {
       method: "POST",
-      url: "https://nervous-pink-sunglasses.cyclic.app/login",
+      url: "http://localhost:4000/login",
       data: {
         email,
         password,
       },
     };
-    console.log(configuration);
-    debugger;
     // make the API call
     axios(configuration)
       .then((result) => {
@@ -32,6 +30,7 @@ export default function Login() {
         cookies.set("TOKEN", result.data.token, {
           path: "/",
         });
+        cookies.set("EMAIL", email);
         // redirect user to the auth page
         window.location.href = "/auth";
 
