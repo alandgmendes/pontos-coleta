@@ -1,10 +1,8 @@
 import { Switch, Route } from "react-router-dom";
 import { Container, Col, Row } from "react-bootstrap";
 import Account from "./Account";
-import FreeComponent from "./FreeComponent";
 import AuthComponent from "./AuthComponent";
 import ProtectedRoutes from "./ProtectedRoutes";
-import MapGoogle from "./Design/Components/map/MapGoogle";
 
 function App() {
   return (
