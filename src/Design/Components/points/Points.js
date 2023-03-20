@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import { Form, Button } from "react-bootstrap";
 import Cookies from "universal-cookie";
 
 
@@ -75,21 +74,21 @@ function FileInput() {
   });
 
   return (
-    <Form>
-        <Form.Group controlId="fileinput">
+    <div>
+        <div id="fileinput">
           {!isLocated && <h1>Não foi possível localizar você</h1>}
           <input type="file" onChange={handleFileInputChange} />
-        </Form.Group>
-        <Form.Group controlId="obs">
+        </div>
+        <div controlId="obs">
         <input type="text" onChange={e => handleObsChange(e)} />
-        </Form.Group>
-        <Button
+        </div>
+        <button
             variant="success"
             onClick={(e) => handleSubmit(e)}          
           >
             Enviar ponto
-        </Button>
-    </Form>
+        </button>
+    </div>
   );
 }
 

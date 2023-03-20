@@ -1,5 +1,5 @@
 import { Switch, Route } from "react-router-dom";
-import { Container, Col, Row } from "react-bootstrap";
+import {Col, Row } from "react-bootstrap";
 import Account from "./Account";
 import AuthComponent from "./AuthComponent";
 import ProtectedRoutes from "./ProtectedRoutes";
@@ -7,7 +7,7 @@ import ProtectedRoutes from "./ProtectedRoutes";
 
 function App() {
   return (
-    <Container>
+    <div>
       <Row>
         <Col className="text-center">
           <section id="navigation">
@@ -20,7 +20,7 @@ function App() {
         <Route exact path="/" component={Account} />
         <ProtectedRoutes path="/auth" component={AuthComponent} />
       </Switch>
-    </Container>
+    </div>
   );
 }
 

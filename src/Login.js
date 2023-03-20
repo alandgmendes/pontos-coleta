@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { Form, Button } from "react-bootstrap";
 import axios from "axios";
 import Cookies from "universal-cookie";
 const cookies = new Cookies();
@@ -45,39 +44,39 @@ export default function Login() {
   return (
     <>
       <h2>Login</h2>
-      <Form onSubmit={(e) => handleSubmit(e)}>
+      <div>
         {/* email */}
-        <Form.Group controlId="formBasicEmail">
-          <Form.Label>Email address</Form.Label>
-          <Form.Control
+        <div controlId="formBasicEmail">
+          <label>Email address</label>
+          <input
             type="email"
             name="email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             placeholder="Enter email"
           />
-        </Form.Group>
+        </div>
 
         {/* password */}
-        <Form.Group controlId="formBasicPassword">
-          <Form.Label>Password</Form.Label>
-          <Form.Control
+        <div controlId="formBasicPassword">
+          <label>Password</label>
+          <input
             type="password"
             name="password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
             placeholder="Password"
           />
-        </Form.Group>
+        </div>
 
         {/* submit button */}
-        <Button
+        <button
           variant="primary"
           type="submit"
           onClick={(e) => handleSubmit(e)}
         >
           Login
-        </Button>
+        </button>
 
         {/* display success message */}
         {login ? (
@@ -85,7 +84,7 @@ export default function Login() {
         ) : (
           <p className="text-danger">You Are Not Logged in</p>
         )}
-      </Form>
+      </div>
     </>
   );
 }
