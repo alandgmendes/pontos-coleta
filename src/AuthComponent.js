@@ -1,5 +1,4 @@
 import React, {  useState } from "react";
-import Select from 'react-select';
 import Cookies from "universal-cookie";
 import MapGoogle from "./Design/Components/map/MapGoogle";
 import Points from "./Design/Components/points/Points";
@@ -40,7 +39,7 @@ export default function AuthComponent() {
 
       {/* displaying our message from our API call */}
       {token && <>
-        <Select placeholder={"Escolha um tipo de ação"} options={optionsConsulta} onChange={e => handleOptionsConsulta(e)} onClick={e => handleOptionsConsulta(e)}/>
+        <select placeholder={"Escolha um tipo de ação"} options={optionsConsulta} onChange={e => handleOptionsConsulta(e)} onClick={e => handleOptionsConsulta(e)}/>
         
         { tipoConsulta === "Mapa" &&<MapGoogle />}
         { tipoConsulta === "AddPt" &&<Points />}
